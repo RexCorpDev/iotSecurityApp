@@ -2,10 +2,151 @@ a {
   color: #454545;
 }
 
+body {
+  background-color: #1E1F21;
+}
+
+.navbar {
+  background-color: #3D434E;
+  border: none;
+}
+
+.glyphicon-knight {
+  color: #EABF3D;
+  font-size: 2.5em;
+  padding-top: 15px;
+}
+
+.glyphicon-facetime-video,.glyphicon-th-list {
+  float: right;
+  position: absolute;
+  right: 200px;
+  top: 40px;
+  font-size: 2em;
+  float: right;
+}
+.glyphicon-facetime-video span, .glyphicon-th-list span{
+  font-family: sans-serif;
+  display: inline-block;
+  margin-left: 7.5px;
+}
+.submit {
+  background-color: #EABF3D;
+}
+
+.log-panel {
+  background-color: #3D434E;
+}
+
+.post-button {
+  background-color: #1BA6FC;
+  color:#3D434E;
+}
+
+.grid-text {
+  padding-left: 15px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-header {
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.fa-th {
+  font-size: 270px;
+  margin-top: 15px;
+}
+
+.nav-page-changers {
+  color: #1BA6FC;
+  margin-top: -11px;
+}
+
+
+.panel-footer {
+    background-color: #3D434E;
+}
+
+.log-panel-blue {
+  border: 1px solid #1BA6FC;
+}
+
+.log-panel-yellow {
+  border: 1px solid #EABF3D;
+}
+
+.log-panel-red {
+  border: 1px solid #FC371D;
+}
+
+
+.navbar-brand {
+  float: none;
+  font-size: 2em;
+}
+
+.image-title {
+  color: #EABF3D;
+  margin-bottom: 20px;
+}
+
+.book-img {
+  margin-top: -24px;
+  margin-left: -30px;
+  max-width: 350px;
+  transform: scale(1.15);
+}
+
+.book-img-container {
+    margin-top: 30px;
+  overflow: hidden;
+  margin: auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+    border: 5px solid #EABF3D;
+}
+
+
+.camera-img {
+  width: 300px;
+  height: 300px;
+    border: 5px solid #EABF3D;
+  border-radius: 50%;
+}
+
+.thumbnail {
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+.logout {
+  font-size: 2em;
+  position: absolute;
+  float: right;
+  top: 40px;
+  right: 50px;
+  color: #FC371D;
+}
+
+
+
+.home-panels {
+  color: #EABF3D;
+  margin-top: 80px;
+  height: 400px;
+  background-color: #3D434E;
+  border: none;
+  width: 100%;
+}
+
+
 button.add-property, button.add-client{
   font-size: 12px;
   margin-bottom: -50px;
 }
+
 
 button.create {
   background-color: #3c8f49;
@@ -24,6 +165,10 @@ button.create {
   font-size: 12px;
 }
 
+.image-top-row {
+  margin-top: 60px;
+}
+
 
 i.add-property, i.add-client, i.add-data {
     content: "\f1c0";
@@ -33,4 +178,7 @@ i.add-property, i.add-client, i.add-data {
 div.container.data-table {
   width: 1500px;
   font-size: 10px;
+}
+.container-fluid{
+  position: relative;
 }

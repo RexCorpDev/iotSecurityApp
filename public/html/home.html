@@ -2,9 +2,13 @@
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">
-          <span class="glyphicon glyphicon-knight"></span>
+        <a class="navbar-brand" ui-sref="home">
+           <span class="glyphicon glyphicon-knight"></span>
         </a>
+         <a  href="#">
+           <span class="logout navbar-right">Logout</span>
+        </a>
+
       </div>
     </div>
   </nav>
@@ -48,23 +52,32 @@
 
     <!-- ALL POSTS -->
     <div class="container main-home-container">
-
-      <div class="col-xs-5 col-sm-offset-1  panel panel-default btn" ui-sref='grid'>
+    <div class="row">
+<div class="col-xs-6">
+      <div class=" panel panel-default home-panels btn" ui-sref='grid'>
         <div class="panel-body text-center panel-title">
           <a >
             GRID
           </a>
         </div>
-        <div class="panel-footer glyphicon glyphicon-plus main-glyph text-center"></div>
+        <div class="panel-footer text-center">
+          <img class="camera-img" src="http://freevector.co/wp-content/uploads/2014/01/36229-surveillance-camera-symbol-in-a-circle.png" alt="">
+        </div>
       </div>
-
-      <div class=" col-xs-5 col-sm-offset-1  panel panel-default btn" ui-sref='log' >
+</div>
+<div class="col-xs-6">
+      <div class="   panel panel-default home-panels btn" ui-sref='log' >
         <div class="panel-body text-center panel-title">
           <a > LOG </a>
         </div>
-        <div class="panel-footer glyphicon glyphicon-log-in main-glyph text-center"></div>
+        <div class="panel-footer text-center">
+        <div class="book-img-container">
+          <img class="book-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Book_icon_(white_on_black).svg/2000px-Book_icon_(white_on_black).svg.png" alt="">
+          </div>
+        </div>
       </div>
-
+      </div>
+</div>
     </div>
 
   </div>

@@ -2,61 +2,21 @@
 
 var app = angular.module('iotHackathonSecurity');
 
-app.service('User', function($http, $q) {
+app.service('Cisco', function($http) {
 
-  this.register = userObj => {
-    return $http.post('/api/users/register', userObj);
+  this.submitHTTP = function () {
+    return $http.get("https://api.ciscospark.com/v1/authorize?client_id=C563bb0df24a693ed32cf9bee766dbc90cf9128efa5b227f50ae67274a269b341&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A3000&scope=spark%3Amessages_write%20spark%3Arooms_read%20spark%3Amessages_read%20spark%3Arooms_write%20spark%3Apeople_read&state=set_state_here")
   };
 
-  this.login = userObj => {
-    return $http.post('/api/users/login', userObj)
-    .then(res => {
-      return this.getProfile();
-    });
-  };
+  this.getAccessToken = function (authorizationCode) {
+    console.log("In getAccessToken()")
+    var grant_type = "grant_type=authorization_code&";
+    var client_id = "client_id=C563bb0df24a693ed32cf9bee766dbc90cf9128efa5b227f50ae67274a269b341&";
+    var client_secret = "client_secret=022d76483051eadd19a6aa256602dc12fdb32e9d75cb7be7901a085ce9ba132c&";
+    var code = `code=${authorizationCode}&`;
+    var redirect_uri = "redirect_uri=http://localhost:3000"
+    return $http.post(`https://api.ciscospark.com/v1/access_token?${grant_type}${client_id}${client_secret}${code}${redirect_uri}`)
+  }
 
-  this.logout = () => {
-    return $http.delete('/api/users/logout')
-    .then(res => {
-      this.currentUser = null;
-      return $q.resolve();
-    });
-  };
 
-  this.getProfile = () => {
-    return $http.get('/api/users/profile')
-    .then(res => {
-      this.currentUser = res.data;
-      return $q.resolve(res.data);
-    })
-    .catch(res => {
-      this.currentUser = null;
-      return $q.reject(res.data);
-    });
-  };
-
-  this.getPosts = () => {
-    return $http.get('/api/users/posts')
-  };
 });
-
-
-
-// this.recordPost = newPost => {
-//   return $http.post('/api/users/profile/', newPost)
-//   .then(res => {
-//     this.currentUser.posts.push(res.data);
-//   })
-// }
-
-// for Delete account page
-// this.deleteUser = id => {
-//   console.log("Delete this:\n", id);
-//   return $http.delete(`/api/users/${id}`);
-// };
-//
-// // for Edit ~ everything else
-//   this.editUser = editedUser => {
-//     console.log("Edit this:\n",editedUser);
-//     return $http.put(`/api/users/${editedUser._id}`, editedCard);
-//   }

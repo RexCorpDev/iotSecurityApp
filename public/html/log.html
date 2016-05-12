@@ -3,31 +3,60 @@
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" ui-sref="home">
-          <span class="glyphicon glyphicon-knight"></span>
+           <span class="glyphicon glyphicon-knight"></span>
         </a>
+
+         <span class="navbar-right glyphicon glyphicon-facetime-video btn nav-page-changers" ui-sref="grid"><span>Grid</span></span>
+
+         <a  href="#">
+           <span class="logout navbar-right">Logout</span>
+        </a>
+
       </div>
-      <ul class="nav navbar navbar-right">
-        <li>
-          <a ui-sref="log">   <h2> <span class="glyphicon glyphicon-menu-hamburger"> Log </h2></span> </a>
-        </li>
-      </ul>
     </div>
   </nav>
 
-  <div class="text-center input-group col-xs-8 col-xs-offset-2">
-    <input type="text" class="form-control" placeholder="What's on your mind?">
-    <span class="input-group-btn">
-      <button class='btn btn-success' type='button'>Post Note </button>
-    </span>
-  </div>
+ <div class="text-center input-group col-xs-8 col-xs-offset-2">
+  <input type="text" class="form-control" placeholder="Please enter your log status">
+  <span class="input-group-btn">
+    <button class='btn post-button' type='button '>Post Log </button>
+  </span>
+</div>
 <hr>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title">{{ "Date" : "Time" }}</h3>
-    </div>
-    <div class="panel-body">
-      {{ " oxford Message " : " Keywords " }} blue text
-    </div>
+<div class="panel text-warning panel-default log-panel log-panel-yellow">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{ "Date and time " }}</h3>
   </div>
+  <div class="panel-body">
+    {{ " oxford messages and key words goes here " }} blue text
+  </div>
+</div>
+
+<div class="panel text-primary panel-default log-panel log-panel-blue">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{ "Date and time " }}</h3>
+  </div>
+  <div class="panel-body">
+    {{ " oxford messages and key words goes here " }} blue text
+  </div>
+</div>
+
+<div class="panel text-warning panel-default log-panel-yellow">
+  <div class="panel-heading log-panel">
+    <h3 class="panel-title">{{ "Date and time " }}</h3>
+  </div>
+  <div class="panel-body">
+    {{ " oxford messages and key words goes here " }} blue text
+  </div>
+</div>
+
+<div class="panel text-danger panel-default log-panel log-panel-red">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{ "Date and time " }}</h3>
+  </div>
+  <div class="panel-body">
+    {{ " oxford messages and key words goes here " }} blue text
+  </div>
+</div>
 
 </div>
